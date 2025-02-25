@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoNest</title>
-    <link rel="stylesheet" href="css/styles.css">
     <script src="JS/main.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/weather.css">
 </head>
 <body>
     <div class="Header">
@@ -17,17 +18,17 @@
                 <h3 class="LogoText">EcoNest</h3>
             </div>
             <div class="Buttons">
-                <div class="Button">
+                <a class="Button-active">
                     <h3 class="ButtonText">Home</h3>
-                </div>
-                <div class="Button">
+                </a>
+                <a href="About.html" class="Button">
                     <div class="ButtonBackground"></div>
                     <h3 class="ButtonText">About</h3>
-                </div>
-                <div class="Button">
+                </a>
+                <a href="Settings.html" class="Button">
                     <div class="ButtonBackground"></div>
-                    <h3 class="ButtonText">About</h3>
-                </div>
+                    <h3 class="ButtonText">Settings</h3>
+                </a>
             </div>
         </div>
         <div class="Account">
@@ -38,10 +39,12 @@
         </div>
     </div>
     <div class="Main">
-        <div class="item 1"></div>
-        <div class="item 2"></div>
-        <div class="item 3"></div>
-        <div class="item 4"></div>
+        <article class="item" id="Weather">
+            <h1>text</h1>
+        </article>
+        <article class="item" id="2"></article>
+        <article class="item" id="3"></article>
+        <article class="item" id="4"></article>
     </div>
 </body>
 </html>

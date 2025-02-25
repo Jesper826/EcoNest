@@ -1,0 +1,242 @@
+:root {
+    --primary-bg: #ECE4B7;
+    --secondary-bg: #EDEAD0;
+    --header-bg: #34623F;
+    --button-bg: #AC5A3F;
+    --text-color: black;
+    --text-light: #FFF;
+    --text-secondary: #EDEAD0;
+    --shadow-color: rgba(0, 0, 0, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    color: var(--text-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: var(--primary-bg);
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden;
+}
+
+.Header {
+    display: flex;
+    width: 6vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    background: var(--header-bg);
+    box-shadow: 7px 0px 10px 0px var(--shadow-color);
+}
+
+.Top {
+    display: flex;
+    width: 6vw;
+    height: 20vh;
+    padding: 20px 0px 700px 0px;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+
+    position: absolute;
+}
+
+.Logo {
+    width: 4vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.LogoFrame {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 13px;
+    background-color: var(--primary-bg);
+    padding: 10px;
+    box-shadow: 4px 4px 4px 0px var(--shadow-color);
+}
+
+.LogoFrame > img {
+    width: 100%;
+    height: 100%;
+}
+
+.LogoText {
+    color: var(--text-secondary);
+    text-shadow: 4px 4px 4px var(--shadow-color);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.Button {
+    display: flex;
+    height: 59px;
+    align-items: center;
+
+    border-radius: 5px 0px 0px 5px;
+    background: var(--button-bg);
+
+    /* buttonDropshadow */
+    box-shadow: 0px 4px 2px 0px var(--shadow-color);
+    
+    transition: all 0.1s ease-in-out;
+}
+
+.Button:hover {
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.Button-active {
+    display: flex;
+    height: 59px;
+    align-items: center;
+
+    border-radius: 5px 0px 0px 5px;
+    background: var(--button-bg);
+
+    /* buttonDropshadow */
+    box-shadow: 0px 4px 2px 0px var(--shadow-color);
+    
+    padding-right: 15px;
+    cursor: default;
+}
+
+.ButtonText {
+    display: flex;
+    width: 120px;
+    height: 59px;
+    flex-direction: column;
+    justify-content: center;
+
+    color: var(--text-light);
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Account {
+    display: flex;
+    height: 209px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    padding-bottom: 2rem;
+}
+
+.AccountFrame {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.AccountText {
+    color: var(--text-secondary);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Main {
+    flex-shrink: 0;
+    width: 94vw;
+    height: 100vh;
+    background: var(--secondary-bg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    display: inline-flex;
+    margin: 2rem 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    box-shadow: 4px 4px 10px 0px var(--shadow-color);
+}
+
+@media screen and (min-width: 1600px) {
+    .Main {
+        width: 90vw;
+    }
+    .Header, .Top, .Account{
+        width: 10vw; 
+    }
+    .Button, .Button-active{
+        width: 8vw;
+    }
+    .Logo{
+        width: 6vw;
+    }
+    .AccountFrame > img{
+        width: 150%;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .Main {
+        width: 88vw;
+    }
+    .Header, .Top{
+        width: 12vw; 
+    }
+    .Button, .Button-active, .Logo{
+        width: 8vw;
+    }
+}
+@media screen and (max-width: 1350px) {
+    .Main {
+        width: 82vw;
+    }
+    .Header, .Top{
+        width: 18vw; 
+    }
+    .Button, .Button-active, .Logo{
+        width: 14vw;
+    }
+}
