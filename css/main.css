@@ -111,11 +111,12 @@ body {
 
     border-radius: 5px 0px 0px 5px;
     background: var(--button-bg);
+    text-decoration: none;
 
-    /* buttonDropshadow */
     box-shadow: 0px 4px 2px 0px var(--shadow-color);
     
     transition: all 0.1s ease-in-out;
+    text-decoration: none
 }
 
 .Button:hover {
@@ -123,20 +124,11 @@ body {
     padding-right: 10px;
 }
 
-.Button-active {
-    display: flex;
-    height: 59px;
-    align-items: center;
-
-    border-radius: 5px 0px 0px 5px;
-    background: var(--button-bg);
-
-    /* buttonDropshadow */
-    box-shadow: 0px 4px 2px 0px var(--shadow-color);
-    
-    padding-right: 15px;
+#activeButton {
+    padding-right: 20px;
     cursor: default;
 }
+
 
 .ButtonText {
     display: flex;
@@ -182,17 +174,22 @@ body {
 }
 
 .Main {
-    flex-shrink: 0;
-    width: 94vw;
+    width: 80vw;
     height: 100vh;
     background: var(--secondary-bg);
-    display: flex;
-    flex-wrap: wrap;
+
+    display: grid;
+    grid-template-areas:
+        "weather tempbuiten"
+        "zon zon";
+    grid-template-columns: 1fr 3fr;
+    gap: 5px;
+    padding: 5px;
 }
 
 .item {
-    display: inline-flex;
     margin: 2rem 2rem;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
@@ -200,11 +197,14 @@ body {
 }
 
 @media screen and (min-width: 1600px) {
+    :root{
+        --HeaderWidth: 10vw;
+    }
     .Main {
-        width: 90vw;
+        width: calc(100% - var(--HeaderWidth));
     }
     .Header, .Top, .Account{
-        width: 10vw; 
+        width: var(--HeaderWidth); 
     }
     .Button, .Button-active{
         width: 8vw;
@@ -217,22 +217,28 @@ body {
     }
 }
 @media screen and (max-width: 1600px) {
-    .Main {
-        width: 88vw;
+    :root{
+        --HeaderWidth: 12vw;
     }
-    .Header, .Top{
-        width: 12vw; 
+    .Main {
+        width: calc(100% - var(--HeaderWidth));
+    }
+    .Header, .Top, .Account{
+        width: var(--HeaderWidth); 
     }
     .Button, .Button-active, .Logo{
         width: 8vw;
     }
 }
 @media screen and (max-width: 1350px) {
-    .Main {
-        width: 82vw;
+    :root{
+        --HeaderWidth: 18vw;
     }
-    .Header, .Top{
-        width: 18vw; 
+    .Main {
+        width: calc(100% - var(--HeaderWidth));
+    }
+    .Header, .Top, .Account{
+        width: var(--HeaderWidth); 
     }
     .Button, .Button-active, .Logo{
         width: 14vw;
