@@ -1,6 +1,28 @@
 
 #Weather{
-    height: 20rem;
-    width: 20rem;    
+    height: 50rem;
+    width: 50rem;    
     background: aquamarine;;
 }
+
+.dag {
+    background-color: #558b2f; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .cel {
+    background-color: #558b2f; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .beschrijving {
+    background-color: #558b2f; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+  }
