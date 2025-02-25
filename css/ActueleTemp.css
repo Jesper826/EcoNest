@@ -1,0 +1,9 @@
+#ActueleTemp{
+    text-align: center;
+    background: aquamarine;
+
+}
+#ActueleTemp > p>img{
+    width: 100px;
+    height: 100px;
+}
