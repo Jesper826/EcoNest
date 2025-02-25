@@ -1,27 +1,27 @@
-
-#Weather{
+#Weather {
     text-align: center;
-    background: aquamarine;;
+    width: 250px;
 }
 
-.dag {
-    background-color: #558b2f; 
+#Weather > .container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-gap: 5px;
+    padding: 10px;
+    border-collapse: collapse; 
+}
+
+#Weather > .dag,
+#Weather > .cel,
+#Weather > .beschrijving {
+    background-color: #558b2f;
     color: white;
     text-align: center;
     padding: 10px;
     border-radius: 5px;
-  }
-  .cel {
-    background-color: #558b2f; 
-    color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .beschrijving {
-    background-color: #558b2f; 
-    color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-  }
+    border: 1px solid #333; 
+}
+
+#Weather > .dag {
+    grid-column: 1 / span 7; 
+}
