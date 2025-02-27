@@ -77,7 +77,6 @@ body {
     border-radius: 13px;
     background-color: var(--primary-bg);
     padding: 10px;
-    box-shadow: 4px 4px 4px 0px var(--shadow-color);
 }
 
 .LogoFrame > img {
@@ -87,12 +86,19 @@ body {
 
 .LogoText {
     color: var(--text-secondary);
-    text-shadow: 4px 4px 4px var(--shadow-color);
     font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+#TextShadow{
+    text-shadow: 4px 4px 0 var(--shadow-color);
+}
+
+#BoxShadow{
+    box-shadow: 5px 5px 4px 4px var(--shadow-color);
 }
 
 .Buttons {
@@ -186,7 +192,6 @@ body {
     grid-template-rows: 4fr 2fr 4fr;
     grid-template-columns: 2fr 2fr;
     gap: 5px;
-    padding: 5px;
 }
 
 .item {

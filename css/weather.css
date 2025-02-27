@@ -1,6 +1,6 @@
 #Weather{
-    margin-bottom: 0;
     padding: 1rem 1rem;
+    font-weight: bold;
 }
 
 #Weather > .container table {
@@ -23,16 +23,16 @@
 }
 
 #Weather > .container th {
-    background-color: #558b2f;
-    color: white;
+    background-color: var(--header-bg);
+    color: var(--text-light);
     border-radius: 10px;
     
 }
 
 #Weather > .container td.cel,
 #Weather > .container td.beschrijving {
-    background-color: #558b2f;
-    color: white;
+    background-color: var(--header-bg);
+    color: var(--text-light);
     border-radius: 10px;
     
 }
