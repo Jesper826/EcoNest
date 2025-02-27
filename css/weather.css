@@ -1,5 +1,44 @@
+#Weather > .container table {
+    border-radius: 10px;
+    table-layout: fixed;
+         
+
+}
 
 #Weather{
+    padding: 1rem;
+}
+
+#Weather > .container td.cel,
+#Weather > .container td.beschrijving > img {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 10px;
+}
+
+#Weather > .container th,
+#Weather > .container td {
+    padding: 3px 5px;
     text-align: center;
-    background: aquamarine;;
+    width: 7.5rem; 
+}
+
+#Weather > .container th {
+    background-color: #558b2f;
+    color: white;
+    border-radius: 10px;
+    
+}
+
+#Weather > .container td.cel,
+#Weather > .container td.beschrijving {
+    background-color: #558b2f;
+    color: white;
+    border-radius: 10px;
+    
+}
+
+#Weather > .container td.beschrijving {
+    font-weight: bold;
+    
 }

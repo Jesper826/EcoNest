@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="css/weather.css">
     <link rel="stylesheet" href="css/zontijden.css">
 </head>
+
 <body>
     <div class="Header">
         <div class="Top">
@@ -41,9 +43,81 @@
     </div>
     <div class="Main">
         <article class="item" id="Weather" style="grid-area: weather;">
-            <h1>text</h1>
+            <div id="Weather">
+                <div class="container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Maten.</th>
+                                <th>Ma.</th>
+                                <th>Di.</th>
+                                <th>Wo.</th>
+                                <th>Do.</th>
+                                <th>Vr.</th>
+                                <th>Za.</th>
+                                <th>Zo.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="beschrijving">Temp.</td>
+                                <td class="cel">3°</td>
+                                <td class="cel">4°</td>
+                                <td class="cel">5°</td>
+                                <td class="cel">2°</td>
+                                <td class="cel">3°</td>
+                                <td class="cel">4°</td>
+                                <td class="cel">3°</td>
+                            </tr>
+                            <tr>
+                                <td class="beschrijving">GevTemp.</td>
+                                <td class="cel">2°</td>
+                                <td class="cel">3°</td>
+                                <td class="cel">4°</td>
+                                <td class="cel">1°</td>
+                                <td class="cel">2°</td>
+                                <td class="cel">3°</td>
+                                <td class="cel">2°</td>
+                            </tr>
+                            <tr>
+                                <td class="beschrijving">Wind.</td>
+                                <td class="cel">No1</td>
+                                <td class="cel">Nw1</td>
+                                <td class="cel">No1</td>
+                                <td class="cel">Nw1</td>
+                                <td class="cel">No1</td>
+                                <td class="cel">Zo1</td>
+                                <td class="cel">Zo1</td>
+                            </tr>
+                            <tr>
+                                <td class="beschrijving">Neerslag.</td>
+                                <td class="cel">ZO1</td>
+                                <td class="cel">01</td>
+                                <td class="cel">NO1</td>
+                                <td class="cel">01</td>
+                                <td class="cel">01</td>
+                                <td class="cel">01</td>
+                                <td class="cel">01</td>
+                            </tr>
+                            <tr>
+                                <td class="beschrijving">Zon.</td>
+                                <td class="cel">149 m2</td>
+                                <td class="cel">150 m2</td>
+                                <td class="cel">147 m2</td>
+                                <td class="cel">142 m2</td>
+                                <td class="cel">146 m2</td>
+                                <td class="cel">143 m2</td>
+                                <td class="cel">149 m2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </article>
-        <article class="item" id="Weather" style="grid-area: tempbuiten;">
+        <article class="item" id="WeatherGrath" style="grid-area: weatherGrath;">
+
+        </article>
+        <article class="item" id="zontijden" style="grid-area: tempbuiten;">
             <h1>text</h1>
         </article>
         <article class="item" id="zontijden" style="grid-area: zon;">
@@ -51,4 +125,5 @@
         </article>
     </div>
 </body>
+
 </html>
