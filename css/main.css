@@ -181,8 +181,8 @@ body {
     display: grid;
     grid-template-areas:
         "weather tempbuiten"
-        "zon zon";
-    grid-template-columns: 1fr 3fr;
+        "weather zon";
+    grid-template-rows: 2fr 2fr;
     gap: 5px;
     padding: 5px;
 }
@@ -194,6 +194,7 @@ body {
     align-items: center;
     flex-shrink: 0;
     box-shadow: 4px 4px 10px 0px var(--shadow-color);
+    background: var(--primary-bg);
 }
 
 @media screen and (min-width: 1600px) {
@@ -213,7 +214,7 @@ body {
         width: 6vw;
     }
     .AccountFrame > img{
-        width: 150%;
+        width: 100%;
     }
 }
 @media screen and (max-width: 1600px) {
