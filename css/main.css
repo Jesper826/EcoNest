@@ -181,14 +181,16 @@ body {
     display: grid;
     grid-template-areas:
         "weather tempbuiten"
-        "weather zon";
-    grid-template-rows: 2fr 2fr;
+        "weatherGrath tempbuiten"
+        "weatherGrath zon";
+    grid-template-rows: 4fr 2fr 4fr;
+    grid-template-columns: 2fr 2fr;
     gap: 5px;
     padding: 5px;
 }
 
 .item {
-    margin: 2rem 2rem;
+    margin: 1rem 1rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;

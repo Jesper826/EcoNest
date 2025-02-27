@@ -1,12 +1,11 @@
+#Weather{
+    margin-bottom: 0;
+    padding: 0rem 1rem;
+}
+
 #Weather > .container table {
     border-radius: 10px;
     table-layout: fixed;
-         
-
-}
-
-#Weather{
-    padding: 1rem;
 }
 
 #Weather > .container td.cel,
