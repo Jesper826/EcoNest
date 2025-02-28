@@ -33,6 +33,11 @@ body {
     overflow: hidden;
 }
 
+img {
+    pointer-events: none;
+    -webkit-touch-callout: none;
+}
+
 .Header {
     display: flex;
     width: 6vw;
@@ -68,6 +73,15 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.LogoTime{
+    color: var(--text-secondary);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 .LogoFrame {
