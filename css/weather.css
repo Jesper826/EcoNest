@@ -1,5 +1,13 @@
 
-#Weather{
-    text-align: center;
-    background: aquamarine;;
+#ActueleTemp {
+    display:flex;
+}
+
+#ActueleTemp > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
 }

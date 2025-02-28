@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="css/weather.css">
     <link rel="stylesheet" href="css/ActueleTemp.css">
 </head>
+
 <body>
     <div class="Header">
         <div class="Top">
@@ -44,13 +46,46 @@
             <h1>text</h1>
         </article>
         <article class="item" id="ActueleTemp" style="grid-area: tempbuiten;">
-            <h1></h1>
-            <p>🌡️ Max: 9°C, Min: 4°C <br>
-                🌦️ Kans op een korte bui, vooral in de ochtend <br>
-                🌤️ Afwisseling van zon en wolken <br>
-                💨 Matige noordelijke wind (3-4 Bft) <br> 
-               </p>
-            
+            <div>
+                <table id="ActueleTemp">
+                    <tr>
+                        <h1>Verwachting van weer</h1>
+                    </tr>
+                    <tr>
+                        <td>🌡️ Max:9°C</td>
+                    </tr>
+                    <tr>
+                        <td>🌡️ Min: 4°C</td>
+                    </tr>
+                    <tr>
+                        <td>🌦️ Kans op een korte bui, vooral in de ochtend</td>
+                    </tr>
+                    <tr>
+                        <td>🌤️ Afwisseling van zon en wolken</td>
+                    </tr>
+                    <tr>
+                        <td>💨 Matige noordelijke wind (3-4 Bft)</td>
+                    </tr>
+                    </p>
+                    <tr>
+                        <p>Vandaag wordt het in Amsterdam Sloterdijk een frisse,
+                            maar grotendeels droge dag. De ochtend begint met
+                            zo'n 4°C en een mix van wolken en wat opklaringen, met hier en daar een lichte bui. In de
+                            middag
+                            loopt
+                            de temperatuur op naar ongeveer 8-9°C en blijft het wisselend bewolkt, met af en toe een
+                            zonnetje en
+                            een
+                            kleine kans op een buitje. De noordenwind is matig en kan het wat kouder laten aanvoelen. In
+                            de
+                            avond
+                            koelt het weer af naar rond de 5°C, de bewolking neemt wat toe, maar regen lijkt uit te
+                            blijven. Al
+                            met
+                            al een frisse, maar prima dag om eropuit te gaan met een jas aan!</p>
+                    </tr>
+                </table>
+            </div>
 
         </article>
         <article class="item" id="Weather" style="grid-area: zon;">
@@ -58,4 +93,5 @@
         </article>
     </div>
 </body>
+
 </html>
