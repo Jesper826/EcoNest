@@ -1,15 +1,7 @@
 #ActueleTemp{
-    text-align: center;
-    background: aquamarine;
-    font-weight: bold;
-}
-#ActueleTemp > p>img{
-    width: 100px;
-    height: 100px;
-}
-
-#ActueleTemp {
     display:flex;
+    text-align: center;
+    font-weight: bold;
 }
 
 #ActueleTemp > div {
@@ -18,5 +10,4 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-
 }
