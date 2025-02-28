@@ -24,7 +24,7 @@
     <div class="Header" id="BoxShadow">
         <div class="Top">
             <div class="Logo">
-                <h3 class="LogoTime" id="TextShadow">0:00 AM</h3>
+                <h3 class="LogoTime" id="TextShadow">0:00</h3>
                 <div class="LogoFrame" id="BoxShadow">
                     <img src="images/logo.png" alt="Logo">
                 </div>
