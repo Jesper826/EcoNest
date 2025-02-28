@@ -17,14 +17,13 @@ setInterval(updateTime, 1000);
 
 updateTime(); // calling the function for the first time so that it does not show the default time
 
+function startOfWeek(date)
+{
+    var diff = date. getDate() - date. getDay() + (date. getDay() === 0 ? - 6 : 1);
+    return new Date(date. setDate(diff));
+}
 
-const myChart = new Chart("myChart", {
-    type: "scatter",
-    data: {},
-    options: {}
-});
 
-const yValues = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
 const xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
 
 new Chart("myChart", {
@@ -32,7 +31,7 @@ new Chart("myChart", {
     data: {
         labels: xValues,
         datasets: [{
-            data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+            data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 6830, 2478],
             borderColor: "red",
             fill: false
         }, {
@@ -42,10 +41,10 @@ new Chart("myChart", {
         }, {
             data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
             borderColor: "blue",
-            fill: false
+            fill: false,
         }]
     },
     options: {
-        legend: { display: false }
+        legend: { display: true }
     }
 });

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoNest | Second</title>
+    <title>EcoNest</title>
 
     <script src="js/main.js" defer></script>
 
@@ -31,8 +31,7 @@
                 <h3 class="LogoText" id="TextShadow">EcoNest</h3>
             </div>
             <div class="Buttons">
-                <a href="index.html" class="Button">
-                    <div class="ButtonBackground"></div>
+                <a class="Button" id="activeButton">
                     <h3 class="ButtonText">Weer</h3>
                 </a>
                 <a href="B.html" class="Button">
@@ -43,7 +42,8 @@
                     <div class="ButtonBackground"></div>
                     <h3 class="ButtonText">Huisje</h3>
                 </a>
-                <a class="Button" id="activeButton">
+                <a href="Settings.html" class="Button">
+                    <div class="ButtonBackground"></div>
                     <h3 class="ButtonText">Settings</h3>
                 </a>
             </div>
@@ -56,19 +56,7 @@
         </div>
     </div>
     <div class="Main">
-        <article class="item" id="Weather" style="grid-area: weather;">
-            <div id="Weather">
-                <div class="container">
-                    
-                </div>
-            </div>
-        </article>
-        <article class="item" id="WeatherGrath" style="grid-area: weatherGrath;">
-        </article>
-        <article class="item" id="ActueleTemp" style="grid-area: tempbuiten;">
-        </article>
-        <article class="item" id="zontijden" style="grid-area: zon;">
-        </article>
+        <?php include "./A.html" ?>
     </div>
 </body>
 
