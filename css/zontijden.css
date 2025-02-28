@@ -1,16 +1,23 @@
-#zontijden > p{
-    font-weight: bold;
-    text-align: center;
-    font-size: 24rem;
-    color: var(--text-light);
-    font-family: Inter;
+#zontijden{
     display: flex;
     justify-content: center;
     align-items: center;
     direction: ltr;
+
+    
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
 }
 
-#zontijden > p>img{
+#zontijden > div{
+    color: var(--text-color);
+    font-family: Inter;
+
+
+}
+
+#zontijden > div >img{
     width: 20rem;
-    height: 20rem;
+    aspect-ratio: 16 / 9;
 }
