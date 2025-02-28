@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoNest</title>
-    <script src="JS/main.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <link rel="stylesheet" href="reset.css">
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/weather.css">
     <link rel="stylesheet" href="css/weatherGrath.css">
@@ -116,7 +120,7 @@
         </article>
         
         <article class="item" id="WeatherGrath" style="grid-area: weatherGrath;">
-            <h1>WeatherGrath</h1>
+            <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
         </article>
         
         <article class="item" id="ActueleTemp" style="grid-area: tempbuiten;">
@@ -174,7 +178,6 @@
         </article>
     </div>
     
-    <script src="js/main.js" defer></script>
 </body>
 
 </html>

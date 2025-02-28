@@ -10,7 +10,7 @@
 
 #Weather > .container td.cel,
 #Weather > .container td.beschrijving > img {
-    width: 9rem;
+    width: 12rem;
     height: 9rem;
     border-radius: 10px;
 }
@@ -19,7 +19,8 @@
 #Weather > .container td {
     padding: 3px 5px;
     text-align: center;
-    width: 7.5rem; 
+    width: 7.5rem;
+    font-size: 2rem;
 }
 
 #Weather > .container th {
