@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoNest</title>
-    <script src="JS/main.js" defer></script>
+
+    <script src="js/main.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/weather.css">
     <link rel="stylesheet" href="css/weatherGrath.css">
@@ -18,18 +24,23 @@
     <div class="Header" id="BoxShadow">
         <div class="Top">
             <div class="Logo">
+                <h3 class="LogoTime" id="TextShadow">0:00 AM</h3>
                 <div class="LogoFrame" id="BoxShadow">
                     <img src="images/logo.png" alt="Logo">
                 </div>
                 <h3 class="LogoText" id="TextShadow">EcoNest</h3>
             </div>
             <div class="Buttons">
-                <a href="index.html" class="Button">
-                    <div class="ButtonBackground"></div>
-                    <h3 class="ButtonText">Home</h3>
-                </a>
                 <a class="Button" id="activeButton">
-                    <h3 class="ButtonText">About</h3>
+                    <h3 class="ButtonText">Weer</h3>
+                </a>
+                <a href="B.html" class="Button">
+                    <div class="ButtonBackground"></div>
+                    <h3 class="ButtonText">Engerie</h3>
+                </a>
+                <a href="C.html" class="Button">
+                    <div class="ButtonBackground"></div>
+                    <h3 class="ButtonText">Huisje</h3>
                 </a>
                 <a href="Settings.html" class="Button">
                     <div class="ButtonBackground"></div>
@@ -45,14 +56,7 @@
         </div>
     </div>
     <div class="Main">
-        <article class="item" id="Weather" style="grid-area: weather;">
-        </article>
-        <article class="item" id="WeatherGrath" style="grid-area: weatherGrath;">
-        </article>
-        <article class="item" id="ActueleTemp" style="grid-area: tempbuiten;">
-        </article>
-        <article class="item" id="zontijden" style="grid-area: zon;">
-        </article>
+        <?php include "./A.html" ?>
     </div>
 </body>
 

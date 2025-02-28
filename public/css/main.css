@@ -1,24 +1,3 @@
-:root {
-    --primary-bg: #ECE4B7;
-    --secondary-bg: #EDEAD0;
-    --header-bg: #34623F;
-    --button-bg: #AC5A3F;
-    --text-color: black;
-    --text-light: #FFF;
-    --text-secondary: #EDEAD0;
-    --shadow-color: rgba(0, 0, 0, 0.25);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    font-size: 62.5%;
-    height: 100%;
-}
-
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
@@ -31,6 +10,11 @@ body {
     margin: 0; 
     height: 100%; 
     overflow: hidden;
+}
+
+img {
+    pointer-events: none;
+    -webkit-touch-callout: none;
 }
 
 .Header {
@@ -68,6 +52,15 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.LogoTime{
+    color: var(--text-secondary);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 .LogoFrame {
@@ -189,8 +182,13 @@ body {
         "weather tempbuiten"
         "weatherGrath tempbuiten"
         "weatherGrath zon";
-    grid-template-rows: 4fr 2fr 4fr;
-    grid-template-columns: 2fr 2fr;
+<<<<<<< Updated upstream
+    grid-template-rows: 5fr 1fr 2fr;
+    grid-template-columns: 4fr 3fr;
+=======
+    grid-template-rows: 5fr 2fr 2fr;
+    grid-template-columns: 2fr 1fr;
+>>>>>>> Stashed changes
     gap: 5px;
 }
 
