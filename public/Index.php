@@ -10,14 +10,16 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
+    <!-- All CSS for Main -->
     <link rel="stylesheet" href="css/reset.css">
-
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/weather.css">
-    <link rel="stylesheet" href="css/weatherGrath.css">
-    <link rel="stylesheet" href="css/ActueleTemp.css">
-    <link rel="stylesheet" href="css/zontijden.css">
-    <link rel="stylesheet" href="css/buitenEnBinnentemp.css">
+
+    <!-- All CSS for A -->
+    <link rel="stylesheet" href="css/A/weather.css">
+    <link rel="stylesheet" href="css/A/weatherGrath.css">
+    <link rel="stylesheet" href="css/A/ActueleTemp.css">
+    <link rel="stylesheet" href="css/A/zontijden.css">
+    <link rel="stylesheet" href="css/A/buitenEnBinnentemp.css">
 </head>
 
 <body>
@@ -53,7 +55,7 @@
                     $page = $_GET['page'];
                 }
             }
-            include "./{$page}.html";
+            include ".{$page}/{$page}.html";
         ?>
     </div>
 </body>

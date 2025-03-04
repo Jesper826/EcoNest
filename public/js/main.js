@@ -11,16 +11,56 @@ function updateTime() {
     document.getElementById('TextShadow').innerHTML = t_str;
 }
 setInterval(updateTime, 1000);
+// calling the function for the first time so that it does not show the default time
+updateTime();
 
-updateTime(); // calling the function for the first time so that it does not show the default time
-
-
-//date for wheather chart
-function startOfWeek(date)
-{
-    var diff = date. getDate() - date. getDay() + (date. getDay() === 0 ? - 6 : 1);
-    return new Date(date. setDate(diff));
+function startOfWeek(date) {
+    var diff = date.getDate() - date.getDay() + (date.getDay() === 0 ? - 6 : 1);
+    return new Date(date.setDate(diff));
 }
+
+const apiUrl = 'https://api.open-meteo.com/v1/forecast?' +
+    'latitude=52.386718' +
+    '&longitude=4.846544' +
+    '&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset' +
+    '&timezone=Europe%2FLondon' +
+    '&start_date=2025-02-28' +
+    '&end_date=2025-02-28';
+
+async function getWeatherData() {
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+$data = getWeatherData();
+
+
+const sunsetToday = $data.daily.sunset[0];
+const sunriseToday = $data.daily.sunrise[0];
+
+console.log("Sunset Today:", sunsetToday);
+console.log("Sunrise Today:", sunriseToday);
+
+// Create an array for min and max temperatures for each day in the week
+// (Even if the API currently returns one day, this will work for multiple days)
+const weeklyTemps = $data.daily.time.map((date, index) => ({
+    date,
+    minTemp: $data.daily.temperature_2m_min[index],
+    maxTemp: $data.daily.temperature_2m_max[index]
+}));
+
+console.log("Weekly Temperature Data:", weeklyTemps);
+
+
+
 
 const xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
 
