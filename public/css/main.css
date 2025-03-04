@@ -182,13 +182,8 @@ img {
         "weather tempbuiten"
         "weatherGrath tempbuiten"
         "weatherGrath zon";
-<<<<<<< Updated upstream
     grid-template-rows: 5fr 1fr 2fr;
     grid-template-columns: 4fr 3fr;
-=======
-    grid-template-rows: 5fr 2fr 2fr;
-    grid-template-columns: 2fr 1fr;
->>>>>>> Stashed changes
     gap: 5px;
 }
 
