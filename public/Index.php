@@ -31,21 +31,10 @@
                 <h3 class="LogoText" id="TextShadow">EcoNest</h3>
             </div>
             <div class="Buttons">
-                <a class="Button" id="activeButton">
-                    <h3 class="ButtonText">Weer</h3>
-                </a>
-                <a href="B.html" class="Button">
-                    <div class="ButtonBackground"></div>
-                    <h3 class="ButtonText">Engerie</h3>
-                </a>
-                <a href="C.html" class="Button">
-                    <div class="ButtonBackground"></div>
-                    <h3 class="ButtonText">Huisje</h3>
-                </a>
-                <a href="settings.html" class="Button">
-                    <div class="ButtonBackground"></div>
-                    <h3 class="ButtonText">Settings</h3>
-                </a>
+                <a class="Button" href="?page=A"><h3>Weer</h3></a>
+                <a class="Button" href="?page=B"><h3>Engerie</h3></a>
+                <a class="Button" href="?page=C"><h3>Huisje</h3></a>
+                <a class="Button" href="?page=Settings"><h3>Settings</h3></a>
             </div>
         </div>
         <div class="Account">
@@ -56,7 +45,16 @@
         </div>
     </div>
     <div class="Main">
-        <?php include "./A.html" ?>
+        <?php
+            $page = 'A';
+            if (isset($_GET['page'])) {
+                $allowed_pages = ['A', 'B', 'C', 'Settings'];
+                if (in_array($_GET['page'], $allowed_pages)) {
+                    $page = $_GET['page'];
+                }
+            }
+            include "./{$page}.html";
+        ?>
     </div>
 </body>
 
