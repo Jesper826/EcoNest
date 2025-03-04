@@ -1,3 +1,5 @@
+
+/// clock left corner
 function updateTime() {
     var currentTime = new Date()
     var hours = currentTime.getHours()
@@ -6,23 +8,19 @@ function updateTime() {
         minutes = "0" + minutes
     }
     var t_str = hours + ":" + minutes + " ";
-    if (hours > 11) {
-        t_str += "PM";
-    } else {
-        t_str += "AM";
-    }
     document.getElementById('TextShadow').innerHTML = t_str;
 }
 setInterval(updateTime, 1000);
 
 updateTime(); // calling the function for the first time so that it does not show the default time
 
+
+//date for wheather chart
 function startOfWeek(date)
 {
     var diff = date. getDate() - date. getDay() + (date. getDay() === 0 ? - 6 : 1);
     return new Date(date. setDate(diff));
 }
-
 
 const xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
 

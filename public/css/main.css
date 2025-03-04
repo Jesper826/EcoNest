@@ -103,7 +103,7 @@ img {
     align-self: stretch;
 }
 
-.Button {
+.Buttons > .Button {
     display: flex;
     height: 59px;
     align-items: center;
@@ -118,18 +118,13 @@ img {
     text-decoration: none
 }
 
-.Button:hover {
+.Buttons > .Button:hover {
     cursor: pointer;
     padding-right: 10px;
 }
 
-#activeButton {
-    padding-right: 20px;
-    cursor: default;
-}
 
-
-.ButtonText {
+.Buttons > .Button > h3 {
     display: flex;
     width: 120px;
     height: 59px;
@@ -182,13 +177,8 @@ img {
         "weather tempbuiten"
         "weatherGrath tempbuiten"
         "weatherGrath zon";
-<<<<<<< Updated upstream
     grid-template-rows: 5fr 1fr 2fr;
     grid-template-columns: 4fr 3fr;
-=======
-    grid-template-rows: 5fr 2fr 2fr;
-    grid-template-columns: 2fr 1fr;
->>>>>>> Stashed changes
     gap: 5px;
 }
 
