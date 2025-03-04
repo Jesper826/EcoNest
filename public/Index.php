@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoNest</title>
 
-    <script src="js/main.js" defer></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/graphAndSunRiseSet.js" defer></script>
+
 
     <!-- All CSS for Main -->
     <link rel="stylesheet" href="css/reset.css">
@@ -55,7 +56,7 @@
                     $page = $_GET['page'];
                 }
             }
-            include ".{$page}/{$page}.html";
+            include "./{$page}.html";
         ?>
     </div>
 </body>
