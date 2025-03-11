@@ -7,8 +7,9 @@
     <title>EcoNest</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-
+    
     <script src="js/main.js" defer></script>
+    <script src="js/weather.js" defer></script>
     <script src="js/graphandsunriseset.js" defer></script>
 
     <!-- All CSS for Main -->
@@ -29,7 +30,7 @@
     <div class="Header" id="BoxShadow">
         <div class="Top">
             <div class="Logo">
-                <h3 class="LogoTime" id="TextShadow">0:00 AM</h3>
+                <h3 class="LogoTime" id="TextShadow">0:00</h3>
                 <div class="LogoFrame" id="BoxShadow">
                     <img src="images/logo.png" alt="Logo">
                 </div>
@@ -62,4 +63,4 @@
     ?>
 </body>
 
-</html>
+</html> 
