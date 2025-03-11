@@ -5,9 +5,8 @@ async function getData() {
         const response = await fetch(url);
         const json = await response.json();
 
-        console.log(json); // Debugging: bekijk de API-response in de console
+        console.log(json); 
 
-        // Controleer of daily data aanwezig is
         if (!json.daily) {
             throw new Error("Geen dagelijkse gegevens gevonden in de API-respons.");
         }
