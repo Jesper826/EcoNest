@@ -167,29 +167,31 @@ img {
     line-height: normal;
 }
 
-.Main {
-    width: 80vw;
+
+#A, #B, #C, #D, #Settings{
     height: 100vh;
     background: var(--secondary-bg);
-
     display: grid;
-    grid-template-areas:
-        "weather tempbuiten"
-        "weatherGrath tempbuiten"
-        "weatherGrath zon";
-    grid-template-rows: 5fr 1fr 2fr;
-    grid-template-columns: 4fr 3fr;
     gap: 5px;
 }
 
 .item {
-    margin: 1rem 1rem;
+    margin: 1rem 2rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
     /* box-shadow: 4px 4px 10px 0px var(--shadow-color); */
     background: var(--primary-bg);
+}
+
+#A{
+    grid-template-areas:
+        "A B"
+        "C B"
+        "C D";
+    grid-template-rows: 5fr 1fr 2fr;
+    grid-template-columns: 4fr 3fr;
 }
 
 @media screen and (min-width: 1600px) {
