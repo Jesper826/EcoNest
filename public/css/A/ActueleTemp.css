@@ -1,6 +1,5 @@
 #ActueleTemp{
     display:flex;
-    text-align: left;
     font-weight: bold;
     padding: 0 5rem;
 }
@@ -11,3 +10,6 @@
     gap: 10px;
 }
 
+#ActueleTempText{
+    text-align: left;
+}

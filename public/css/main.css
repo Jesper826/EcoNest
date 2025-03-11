@@ -169,7 +169,7 @@ img {
 
 
 #A, #B, #C, #D, #Settings{
-    min-width: 80vw;
+    width: 100%;
     height: 100vh;
     background: var(--secondary-bg);
     display: grid;
@@ -177,7 +177,7 @@ img {
 }
 
 .item {
-    margin: 1rem 2rem;
+    margin: 0.5rem 0.5rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -189,9 +189,9 @@ img {
 #A{
     grid-template-areas:
         "A B"
-        "C B"
+        "C D"
         "C D";
-    grid-template-rows: 5fr 1fr 2fr;    /* ---- */
+    grid-template-rows: 3fr 1fr 3fr;    /* ---- */
     grid-template-columns: 4fr 3fr;     /* |||| */
 }
 

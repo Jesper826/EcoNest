@@ -80,16 +80,19 @@ async function main() {
         data: {
             labels: xValues,
             datasets: [{
+                label: "Max. Temp",
                 data: dataWeek.daily.temperature_2m_max,
                 borderColor: "red",
                 backgroundColor: "rgba(255, 0, 0, 0.5)"  // added background color
             }, {
+                label: "Min. Temp",
                 data: dataWeek.daily.temperature_2m_min,
                 borderColor: "blue",
                 backgroundColor: "rgba(0, 0, 255, 0.5)"  // added background color
             }]
         },
         options: {
+            legend: { display: true },
             scales: {
                 y: {
                     beginAtZero: true
