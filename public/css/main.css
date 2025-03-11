@@ -169,6 +169,7 @@ img {
 
 
 #A, #B, #C, #D, #Settings{
+    min-width: 80vw;
     height: 100vh;
     background: var(--secondary-bg);
     display: grid;
@@ -190,8 +191,44 @@ img {
         "A B"
         "C B"
         "C D";
-    grid-template-rows: 5fr 1fr 2fr;
-    grid-template-columns: 4fr 3fr;
+    grid-template-rows: 5fr 1fr 2fr;    /* ---- */
+    grid-template-columns: 4fr 3fr;     /* |||| */
+}
+
+#B{
+    grid-template-areas:
+        "A B"
+        "A D"
+        "C D";
+    grid-template-rows: 5fr 1fr 2fr;    /* ---- */
+    grid-template-columns: 4fr 3fr;     /* |||| */
+}
+
+#C{
+    grid-template-areas:
+        "A B"
+        "C B"
+        "C D";
+    grid-template-rows: 5fr 1fr 2fr;    /* ---- */
+    grid-template-columns: 4fr 3fr;     /* |||| */
+}
+
+#D{
+    grid-template-areas:
+        "A B"
+        "A D"
+        "C D";
+    grid-template-rows: 5fr 3fr 2fr;    /* ---- */
+    grid-template-columns: 4fr 3fr;     /* |||| */
+}
+
+#Settings{
+    grid-template-areas:
+        "A B"
+        "A D"
+        "C D";
+    grid-template-rows: 2fr 1fr 2fr;    /* ---- */
+    grid-template-columns: 4fr 3fr;     /* |||| */
 }
 
 @media screen and (min-width: 1600px) {
