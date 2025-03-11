@@ -1,8 +1,8 @@
 #ActueleTemp{
     display:flex;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
-    padding: 0 2rem;
+    padding: 0 5rem;
 }
 
 #ActueleTemp > div {
