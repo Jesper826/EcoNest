@@ -22,10 +22,11 @@
     <link rel="stylesheet" href="css/A/weather.css">
     <link rel="stylesheet" href="css/A/ActueleTemp.css">
     <link rel="stylesheet" href="css/A/zontijden.css">
-    <link rel="stylesheet" href="css/A/buitenEnBinnentemp.css">
     
     <!-- All CSS for B -->
     <link rel="stylesheet" href="css/B/weatherGrath.css">
+    <link rel="stylesheet" href="css/B/buitenEnBinnentemp.css">
+
 </head>
 
 <body>
