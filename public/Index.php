@@ -9,7 +9,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     
     <script src="js/main.js" defer></script>
-    <script src="js/graphAndSunRiseSet.js" defer></script>
     <script src="js/weather.js" defer></script>
     <script src="js/energy.js" defer></script>
 
