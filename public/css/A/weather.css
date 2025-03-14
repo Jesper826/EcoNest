@@ -12,7 +12,7 @@
 #Weather > .container td.cel,
 #Weather > .container td.beschrijving > img {
     width: 12rem;
-    height: 9rem;
+    height: 8rem;
     border-radius: 10px;
 }
 
