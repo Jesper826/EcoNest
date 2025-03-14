@@ -188,11 +188,10 @@ img {
 
 #A{
     grid-template-areas:
-        "A B"
-        "C D"
-        "C D";
-    grid-template-rows: 3fr 1fr 3fr;    /* ---- */
-    grid-template-columns: 4fr 3fr;     /* |||| */
+        "A A B"
+        "C D D";
+    grid-template-rows: 3fr 3fr;    /* ---- */
+    grid-template-columns: 4fr 1fr 3fr;     /* |||| */
 }
 
 #B{
