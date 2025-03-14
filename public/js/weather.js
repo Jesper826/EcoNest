@@ -1,11 +1,36 @@
+function formatDate(date) {
+    return date.toISOString().split('T')[0];
+}
+
+function startOfWeek(date) {
+    const d = new Date(date);
+    const diff = d.getDate() - d.getDay() + (d.getDay() === 0 ? -6 : 1);
+    d.setDate(diff);
+    return d;
+}
+function endOfWeek(date) {
+    const start = startOfWeek(date);
+    const end = new Date(start);
+    end.setDate(start.getDate() + 6);
+    return end;
+}
+
+const now = new Date();
+
+const apiUrlWeek = 'https://api.open-meteo.com/v1/forecast?' +
+    'latitude=52.386718' +
+    '&longitude=4.846544' +
+    '&daily=temperature_2m_max,temperature_2m_min' +
+    '&timezone=Europe%2FBerlin' +
+    '&start_date=' + formatDate(startOfWeek(now)) +
+    '&end_date=' + formatDate(endOfWeek(now));
+
 async function getData() {
-    const url = "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=uv_index_max,rain_sum,wind_gusts_10m_max,temperature_2m_min,daylight_duration&timezone=Europe%2FBerlin&timeformat=unixtime";
-    
     try {
-        const response = await fetch(url);
+        const response = await fetch(apiUrlWeek);
         const json = await response.json();
 
-        console.log(json); 
+        console.log(json);
 
         if (!json.daily) {
             throw new Error("Geen dagelijkse gegevens gevonden in de API-respons.");
@@ -36,7 +61,6 @@ async function getData() {
                 <td class='beschrijving'>Windstoten</td>
                 ${daily.wind_gusts_10m_max.map(wind => `<td class='cel'>${wind} km/h</td>`).join("")}
             </tr>
-            
         `;
 
         document.getElementById("weather-table").innerHTML = tableRows;

@@ -1,17 +1,39 @@
-function startOfWeek(date) {
-    var diff = date.getDate() - date.getDay() + (date.getDay() === 0 ? -6 : 1);
-    return new Date(date.setDate(diff));
+function formatDate(date) {
+    return date.toISOString().split('T')[0];
 }
 
-const apiUrl = 'https://api.open-meteo.com/v1/forecast?' +
+function startOfWeek(date) {
+    const d = new Date(date);
+    const diff = d.getDate() - d.getDay() + (d.getDay() === 0 ? -6 : 1);
+    d.setDate(diff);
+    return d;
+}
+function endOfWeek(date) {
+    const start = startOfWeek(date);
+    const end = new Date(start);
+    end.setDate(start.getDate() + 6);
+    return end;
+}
+
+const now = new Date();
+
+const apiUrlDay = 'https://api.open-meteo.com/v1/forecast?' +
     'latitude=52.386718' +
     '&longitude=4.846544' +
-    '&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset' +
-    '&timezone=Europe%2FLondon' +
-    '&start_date=2025-02-28' +
-    '&end_date=2025-02-28';
+    '&daily=sunrise,sunset' +
+    '&timezone=Europe%2FBerlin' +
+    '&start_date=' + formatDate(now) +
+    '&end_date=' + formatDate(now);
 
-async function getWeatherData() {
+const apiUrlWeek = 'https://api.open-meteo.com/v1/forecast?' +
+    'latitude=52.386718' +
+    '&longitude=4.846544' +
+    '&daily=temperature_2m_max,temperature_2m_min' +
+    '&timezone=Europe%2FBerlin' +
+    '&start_date=' + formatDate(startOfWeek(now)) +
+    '&end_date=' + formatDate(endOfWeek(now));
+
+async function getData(apiUrl) {
     try {
         const response = await fetch(apiUrl);
         if (!response.ok) {
@@ -25,51 +47,57 @@ async function getWeatherData() {
 }
 
 async function main() {
-    const data = await getWeatherData();
-    if (!data) return; // Stop if there's no data
+    const dataDay = await getData(apiUrlDay);
+    const dataWeek = await getData(apiUrlWeek);
+    if (!dataDay || !dataWeek) return;
 
-    // Extract today's sunrise and sunset
-    const sunriseToday = data.daily.sunrise[0];
-    const sunsetToday = data.daily.sunset[0];
+    console.log('dataDay:', dataDay);
+    console.log('dataWeek:', dataWeek);
 
-    console.log("Sunrise Today:", sunriseToday);
-    console.log("Sunset Today:", sunsetToday);
+    //dayly sunrise and sunset
+    const sunrise = dataDay.daily.sunrise[0];
+    const sunset = dataDay.daily.sunset[0];
+    const simplifiedSunrise = sunrise.split('T')[1]; // from "2025-02-28T06:28" to "06:28"
+    const simplifiedSunset = sunset.split('T')[1]; // from "2025-02-28T17:17" to "17:17"
 
-    // Create an array for min and max temperatures for each day in the week
-    const weeklyTemps = data.daily.time.map((date, index) => ({
-        date,
-        minTemp: data.daily.temperature_2m_min[index],
-        maxTemp: data.daily.temperature_2m_max[index]
-    }));
+    const sunriseH3 = document.getElementById("sunrise");
+    const sunsetH3 = document.getElementById("sunset");
 
-    console.log("Weekly Temperature Data:", weeklyTemps);
+    sunriseH3.innerHTML = `Sunrise: ${simplifiedSunrise}`;
+    sunsetH3.innerHTML = `Sunset: ${simplifiedSunset}`;
 
-    const sunriseText = document.getElementById("sunrise");
-    const sunsetText = document.getElementById("sunset");
+    //weekly weather
+    const xValues = ["ma", "di", "wo", "do", "vr", "za", "zo"];
 
-    // Example Chart using Chart.js
-    const xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+    const ctx = document.getElementById("WeatherChart").getContext("2d");
+    if (!ctx) {
+        console.error('Canvas element not found');
+        return;
+    }
 
-    new Chart("WeatherChart", {
-        type: "line",
+    new Chart(ctx, {
+        type: "bar",
         data: {
             labels: xValues,
             datasets: [{
-                data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 6830, 2478],
+                label: "Max. Temp",
+                data: dataWeek.daily.temperature_2m_max,
                 borderColor: "red",
-                fill: false
+                backgroundColor: "rgba(255, 0, 0, 0.5)"  // added background color
             }, {
-                data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
-                borderColor: "green",
-                fill: false
-            }, {
-                data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
+                label: "Min. Temp",
+                data: dataWeek.daily.temperature_2m_min,
                 borderColor: "blue",
-                fill: false
+                backgroundColor: "rgba(0, 0, 255, 0.5)"  // added background color
             }]
         },
         options: {
-            legend: { display: true }
+            legend: { display: true },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
         }
     });
 }

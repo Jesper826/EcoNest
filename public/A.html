@@ -1,74 +1,67 @@
-<article class="item" id="Weather" style="grid-area: weather;">
-    <div id="Weather">
-        <div class="container">
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="8">Weerbericht</th>
-                    </tr>
-                </thead>
-                
-                <tbody id="weather-table">
-                </tbody>
+<div id="A">
+
+    <article class="item" id="Weather" style="grid-area: A;">
+        <div id="Weather">
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="8">Weerbericht</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="weather-table">
+                    </tbody>
+                </table>
+            </div>
+    </article>
+
+    <article class="item" id="ActueleTemp" style="grid-area: B;">
+        <div>
+            <table id="ActueleTempText">
+                <tr>
+                    <h1>Verwachting van weer</h1>
+                </tr>
+                <tr>
+                    <td>🌡️ Max:9°C</td>
+                </tr>
+                <tr>
+                    <td>🌡️ Min: 4°C</td>
+                </tr>
+                <tr>
+                    <td>🌦️ Kans op een korte bui, vooral in de ochtend</td>
+                </tr>
+                <tr>
+                    <td>🌤️ Afwisseling van zon en wolken</td>
+                </tr>
+                <tr>
+                    <td>💨 Matige noordelijke wind (3-4 Bft)</td>
+                </tr>
+                </p>
+                <tr>
+                    <p>Vandaag wordt het in Amsterdam Sloterdijk een frisse, maar grotendeels droge dag.
+                        De ochtend begint met zo'n 4°C en een mix van wolken en wat opklaringen, met hier en daar een lichte bui. <br> 
+                        In de middag loopt de temperatuur op naar ongeveer 8-9°C en blijft het wisselend bewolkt. <br> 
+                        Met af en toe een zonnetje en een kleine kans op een buitje. De noordenwind is matig en kan het wat kouder laten aanvoelen. <br> 
+                        In de avond koelt het weer af naar rond de 5°C, de bewolking neemt wat toe, maar regen lijkt uit te blijven. <br>
+                        Al met al een frisse, maar prima dag om eropuit te gaan met een jas aan!</p>
+                </tr>
             </table>
         </div>
-    </div>
-</article>
+    </article>
 
-<article class="item" id="WeatherGrath" style="grid-area: weatherGrath;">
-    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
-</article>
+    <article class="item" id="WeatherGrath" style="grid-area: C;">
+        <canvas id="WeatherChart" style="max-height:100%;max-width:80%"></canvas>
+    </article>
 
-<article class="item" id="ActueleTemp" style="grid-area: tempbuiten;">
-    <div>
-        <table id="ActueleTemp">
-            <tr>
-                <h1>Verwachting van weer</h1>
-            </tr>
-            <tr>
-                <td>🌡️ Max:9°C</td>
-            </tr>
-            <tr>
-                <td>🌡️ Min: 4°C</td>
-            </tr>
-            <tr>
-                <td>🌦️ Kans op een korte bui, vooral in de ochtend</td>
-            </tr>
-            <tr>
-                <td>🌤️ Afwisseling van zon en wolken</td>
-            </tr>
-            <tr>
-                <td>💨 Matige noordelijke wind (3-4 Bft)</td>
-            </tr>
-            </p>
-            <tr>
-                <p>Vandaag wordt het in Amsterdam Sloterdijk een frisse,
-                    maar grotendeels droge dag. De ochtend begint met
-                    zo'n 4°C en een mix van wolken en wat opklaringen, met hier en daar een lichte bui. In de
-                    middag
-                    loopt
-                    de temperatuur op naar ongeveer 8-9°C en blijft het wisselend bewolkt, met af en toe een
-                    zonnetje en
-                    een
-                    kleine kans op een buitje. De noordenwind is matig en kan het wat kouder laten aanvoelen. In
-                    de
-                    avond
-                    koelt het weer af naar rond de 5°C, de bewolking neemt wat toe, maar regen lijkt uit te
-                    blijven. Al
-                    met
-                    al een frisse, maar prima dag om eropuit te gaan met een jas aan!</p>
-            </tr>
-        </table>
-    </div>
-</article>
-
-<article class="item" id="zontijden" style="grid-area: zon;">
-    <div>
-        <img src="images/sunrise.png" alt="">
-        <h3>0:00 AM</h3>
-    </div>
-    <div>
-        <img src="images/sunset.png" alt="">
-        <h3>0:00 AM</h3>
-    </div>
-</article>
+    <article class="item" id="zontijden" style="grid-area: D;">
+        <div>
+            <img src="images/sunrise.png" alt="">
+            <h3 id="sunrise">Sunrise: 00:00</h3>
+        </div>
+        <div>
+            <img src="images/sunset.png" alt="">
+            <h3 id="sunset">Sunrise: 00:00</h3>
+        </div>
+    </article>
+</div>

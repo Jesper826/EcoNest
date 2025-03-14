@@ -1,12 +1,15 @@
 #ActueleTemp{
     display:flex;
     font-weight: bold;
+    padding: 0 5rem;
 }
 
 #ActueleTemp > div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
+}
+
+#ActueleTempText{
+    text-align: left;
 }

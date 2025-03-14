@@ -7,9 +7,11 @@
     <title>EcoNest</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    
     <script src="js/main.js" defer></script>
-    <script src="js/weather.js" defer></script>
     <script src="js/graphAndSunRiseSet.js" defer></script>
+    <script src="js/weather.js" defer></script>
+    <script src="js/energy.js" defer></script>
 
 
     <!-- All CSS for Main -->
@@ -18,10 +20,12 @@
 
     <!-- All CSS for A -->
     <link rel="stylesheet" href="css/A/weather.css">
-    <link rel="stylesheet" href="css/A/weatherGrath.css">
     <link rel="stylesheet" href="css/A/ActueleTemp.css">
     <link rel="stylesheet" href="css/A/zontijden.css">
     <link rel="stylesheet" href="css/A/buitenEnBinnentemp.css">
+    
+    <!-- All CSS for B -->
+    <link rel="stylesheet" href="css/B/weatherGrath.css">
 </head>
 
 <body>
@@ -48,18 +52,17 @@
             </div>
         </div>
     </div>
-    <div class="Main">
-        <?php
-            $page = 'A';
-            if (isset($_GET['page'])) {
-                $allowed_pages = ['A', 'B', 'C', 'Settings'];
-                if (in_array($_GET['page'], $allowed_pages)) {
-                    $page = $_GET['page'];
-                }
+    <!-- The Main page -->
+    <?php
+        $page = 'A';
+        if (isset($_GET['page'])) {
+            $allowed_pages = ['A', 'B', 'C', 'Settings'];
+            if (in_array($_GET['page'], $allowed_pages)) {
+                $page = $_GET['page'];
             }
-            include "./{$page}.html";
-        ?>
-    </div>
+        }
+        include "./{$page}.html";
+    ?>
 </body>
 
 </html> 
