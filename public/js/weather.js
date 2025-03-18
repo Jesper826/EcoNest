@@ -145,4 +145,20 @@ function setChartData(data) {
     });
 }
 
+async function fetchPrice() {
+    try {
+        const response = await fetch('https://api.energyzero.nl/v1/dynamic-prices');
+        const data = await response.json();
+        const currentHour = new Date().getHours();
+        const currentPrice = data.prices.find(price => new Date(price.datetime).getHours() === currentHour);
+        document.getElementById("currentPrice").innerText = "€" + currentPrice.price.toFixed(2);
+    } catch (error) {
+        console.error("Fout bij ophalen prijs:", error);
+        document.getElementById("currentPrice").innerText = "Niet beschikbaar";
+    }
+}
+
+setInterval(fetchPrice, 60000); // Elke 60 seconden verversen
+fetchPrice();
+
 main();
