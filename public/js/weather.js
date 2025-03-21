@@ -100,8 +100,8 @@ function setDiscripie(data) {
     const maxTemp = document.getElementById("maxTempText");
     const minTemp = document.getElementById("minTempText");
 
-    // maxTemp.innerHTML = '🌡️ Max: '+ data.daily.temperature_2m_max[0]+'°C';
-    // minTemp.innerHTML = '🌡️ Min: '+ data.daily.temperature_2m_min[0]+'°C';
+    maxTemp.innerHTML = "🌡️ Max: "+ data.daily.temperature_2m_max[0]+"°C";
+    minTemp.innerHTML = "🌡️ Min: "+ data.daily.temperature_2m_min[0]+"°C";
 }
 
 function sunsetSunrise(data) {
