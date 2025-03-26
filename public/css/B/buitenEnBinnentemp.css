@@ -1,0 +1,43 @@
+#BBid {
+    --primary-bg: #ECE4B7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#BBtemp {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+}
+
+#BBtable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#BBtable th, #BBtable td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+#BBtitle {
+    font-size: 18px;
+    padding: 10px;
+}
+
+#BBuren {
+    font-weight: bold;
+}
+
+#BBbinnen, #BBbuiten {
+    font-weight: bold;
+}
+
+.BBtijd {
+    font-weight: bold;
+}

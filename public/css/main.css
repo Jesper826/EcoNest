@@ -197,9 +197,9 @@ img {
 #B{
     grid-template-areas:
         "A B"
-        "A D"
+        "C B"
         "C D";
-    grid-template-rows: 5fr 1fr 2fr;    /* ---- */
+    grid-template-rows: 5fr 2fr 2fr;    /* ---- */
     grid-template-columns: 4fr 3fr;     /* |||| */
 }
 
