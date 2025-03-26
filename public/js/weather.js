@@ -79,7 +79,7 @@ function setWeatherData(data) {
         ["rain", daily.rain_sum, " mm"],
         ["wind gusts", daily.wind_gusts_10m_max, " m/s"],
         ["max Temp", daily.temperature_2m_max, "°C"]
-        //["min Temp",    daily.temperature_2m_min,   "°C"]
+        
     ];
 
     let tableRows = "";
@@ -98,8 +98,8 @@ function setWeatherData(data) {
 function sunsetSunrise(data) {
     const sunrise = data.daily.sunrise[0];
     const sunset = data.daily.sunset[0];
-    const simplifiedSunrise = sunrise.split('T')[1]; // from "2025-02-28T06:28" to "06:28"
-    const simplifiedSunset = sunset.split('T')[1]; // from "2025-02-28T17:17" to "17:17"
+    const simplifiedSunrise = sunrise.split('T')[1]; 
+    const simplifiedSunset = sunset.split('T')[1]; 
 
     const sunriseH3 = document.getElementById("sunrise");
     const sunsetH3 = document.getElementById("sunset");
@@ -126,12 +126,12 @@ function setChartData(data) {
                 label: "Max. Temp",
                 data: data.daily.temperature_2m_max,
                 borderColor: "red",
-                backgroundColor: "rgba(255, 0, 0, 0.5)"  // added background color
+                backgroundColor: "rgba(255, 0, 0, 0.5)"  
             }, {
                 label: "Min. Temp",
                 data: data.daily.temperature_2m_min,
                 borderColor: "blue",
-                backgroundColor: "rgba(0, 0, 255, 0.5)"  // added background color
+                backgroundColor: "rgba(0, 0, 255, 0.5)"  
             }]
         },
         options: {
