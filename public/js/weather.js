@@ -10,7 +10,7 @@ function startOfWeek(date) {
 }
 function endOfWeek(date) {
     const start = startOfWeek(date);
-    const end = new Date(start);
+    const end = new Date(start);    
     end.setDate(start.getDate() + 6);
     return end;
 }
@@ -20,7 +20,7 @@ const now = new Date();
 const apiUrlDay = 'https://api.open-meteo.com/v1/forecast?' +
     'latitude=52.386718' +
     '&longitude=4.846544' +
-    '&daily=sunrise,sunset,temperature_2m_min,temperature_2m_max' +
+    '&daily=sunrise,sunset,temperature_2m_min,temperature_2m_max' +   
     '&timezone=Europe%2FBerlin' +
     '&start_date=' + formatDate(now) +
     '&end_date=' + formatDate(now);
@@ -159,7 +159,7 @@ async function fetchPrice() {
         const response = await fetch('https://api.energyzero.nl/v1/dynamic-prices');
         const data = await response.json();
         const currentHour = new Date().getHours();
-        const currentPrice = data.prices.find(price => new Date(price.datetime).getHours() === currentHour);
+        const currentPrice = data.prices.find(price => new Dfate(price.datetime).getHours() === currentHour);
         document.getElementById("currentPrice").innerText = "€" + currentPrice.price.toFixed(2);
     } catch (error) {
         console.error("Fout bij ophalen prijs:", error);
@@ -170,4 +170,4 @@ async function fetchPrice() {
 setInterval(fetchPrice, 60000); // Elke 60 seconden verversen
 fetchPrice();
 
-main();
+main(); 
