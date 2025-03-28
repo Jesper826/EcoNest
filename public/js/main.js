@@ -1,4 +1,3 @@
-
 /// clock left corner
 function updateTime() {
     var currentTime = new Date()
@@ -13,3 +12,30 @@ function updateTime() {
 setInterval(updateTime, 1000);
 
 updateTime(); // calling the function for the first time so that it does not show the default time
+
+
+function SetLampje(ledNum, inOn) {
+    url = ("https://38406.hosts2.ma-cloud.nl/EcoNest/api/post.php?led" + ledNum + "=" + inOn);
+    console.log(url);
+    fetch(url);
+}
+
+function GetData() {
+    return fetch("https://38406.hosts2.ma-cloud.nl/EcoNest/api/post.php")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .catch(error => {
+            console.error("Fetch error:", error);
+        });
+}
+
+// Usage:
+GetData().then(data => {
+    console.log("JSON data:", data);
+});
+
+//SetLampje(1, false);
