@@ -20,7 +20,7 @@ const now = new Date();
 const apiUrlDay = 'https://api.open-meteo.com/v1/forecast?' +
     'latitude=52.386718' +
     '&longitude=4.846544' +
-    '&daily=sunrise,sunset' +
+    '&daily=sunrise,sunset,temperature_2m_min,temperature_2m_max' +
     '&timezone=Europe%2FBerlin' +
     '&start_date=' + formatDate(now) +
     '&end_date=' + formatDate(now);
@@ -45,9 +45,7 @@ async function getData(apiUrl) {
         console.error('Error fetching data:', error);
     }
 }
-
 async function main() {
-
     const dataDay = await getData(apiUrlDay);
     const dataWeek = await getData(apiUrlWeek);
     if (!dataDay || !dataWeek) return;
@@ -57,6 +55,9 @@ async function main() {
 
     // jesper zijn dingen
     setWeatherData(dataWeek);
+
+    //set brams text data
+    setDiscripie(dataDay);
 
     //dayly sunrise and sunset
     sunsetSunrise(dataDay);
@@ -93,6 +94,14 @@ function setWeatherData(data) {
     }
 
     document.getElementById("weather-table").innerHTML = tableRows;
+}
+
+function setDiscripie(data) {
+    const maxTemp = document.getElementById("maxTempText");
+    const minTemp = document.getElementById("minTempText");
+
+    maxTemp.innerHTML = "🌡️ Max: "+ data.daily.temperature_2m_max[0]+"°C";
+    minTemp.innerHTML = "🌡️ Min: "+ data.daily.temperature_2m_min[0]+"°C";
 }
 
 function sunsetSunrise(data) {
