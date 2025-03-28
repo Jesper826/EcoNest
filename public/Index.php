@@ -8,9 +8,11 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     
-    <script src="js/main.js" defer></script>
-    <script src="js/weather.js" defer></script>
-    <script src="js/energy.js" defer></script>
+    <script type="text/javascript" src="js/main.js" defer></script>
+    <script type="text/javascript" src="js/weather.js" defer></script>
+    <script type="text/javascript" src="js/energy.js" defer></script>
+
+    <script type="text/javascript" src="js/setlampjes.js" defer></script>
 
 
     <!-- All CSS for Main -->
@@ -25,6 +27,7 @@
     <!-- All CSS for B -->
     <link rel="stylesheet" href="css/B/weatherGrath.css">
     <link rel="stylesheet" href="css/B/buitenEnBinnentemp.css">
+    <link rel="stylesheet" href="css/B/slider.css">
 
 </head>
 
