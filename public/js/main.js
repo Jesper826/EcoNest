@@ -12,4 +12,4 @@ function updateTime() {
 }
 setInterval(updateTime, 1000);
 
-updateTime(); // calling the function for the first time so that it does not show the default time
+updateTime(); // calling the function for the first time so that it does not show the default time,

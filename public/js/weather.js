@@ -147,7 +147,7 @@ function setChartData(data) {
 
 async function fetchPrice() {
     try {
-        const response = await fetch('https://api.energyzero.nl/v1/dynamic-prices');
+        const response = await fetch('https://api.energyzero.nl/v1/energyprices?fromDate=2022-11-06T23%3A00%3A00.000Z&tillDate=2022-11-07T22%3A59%3A59.999Z&interval=4&usageType=1&inclBtw=true&inclEnergyTax=true&inclOnafhankelijkeLeverancier=true&inclVastrecht=true&inclVastrechtOnafhankelijkeLeverancier=true&inclVastrechtNetbeheerder=true&inclVastrechtOverheid=true&inclVastrechtOverige=true&inclVastrechtOverigeOnafhankelijkeLeverancier=true&inclVastrechtOverigeNetbeheerder=true&inclVastrechtOverigeOverheid=true&inclVastrechtOverigeOverige=true&inclVastrechtOverigeOverigeOnafhankelijkeLeverancier=true&inclVastrechtOverigeOverigeNetbeheerder=true&inclVastrechtOverigeOverigeOverheid=true');
         const data = await response.json();
         const currentHour = new Date().getHours();
         const currentPrice = data.prices.find(price => new Date(price.datetime).getHours() === currentHour);
