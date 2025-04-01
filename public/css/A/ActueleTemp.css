@@ -1,10 +1,10 @@
 #ActueleTemp{
     display:flex;
     font-weight: bold;
-    padding: 0 5rem;
 }
 
 #ActueleTemp > div {
+    padding: 0 5rem;
     display: flex;
     flex-direction: column;
     gap: 10px;

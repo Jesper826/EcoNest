@@ -1,0 +1,112 @@
+@media screen and (min-width: 1600px) {
+    :root {
+        --HeaderWidth: 10vw;
+    }
+
+    .Main {
+        width: calc(100vw - var(--HeaderWidth));
+    }
+
+    .Header,
+    .Top,
+    .Account {
+        width: var(--HeaderWidth);
+    }
+
+    .Button,
+    .Button-active {
+        width: 8vw;
+    }
+
+    .Logo {
+        width: 6vw;
+    }
+
+    .AccountFrame>img {
+        width: 110%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    :root {
+        --HeaderWidth: 12vw;
+    }
+
+    .Main {
+        width: calc(100vw - var(--HeaderWidth));
+    }
+
+    .Header,
+    .Top,
+    .Account {
+        width: var(--HeaderWidth);
+    }
+
+    .Button,
+    .Button-active,
+    .Logo {
+        width: 8vw;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    :root {
+        --HeaderWidth: 18vw;
+    }
+
+    .Main {
+        width: calc(100vw - var(--HeaderWidth));
+    }
+
+    .Header,
+    .Top,
+    .Account {
+        width: var(--HeaderWidth);
+    }
+
+    .Button,
+    .Button-active,
+    .Logo {
+        width: 14vw;
+    }
+}
+
+@media screen and (max-width: 1270px) {
+    :root {
+        --HeaderWidth: 12vw;
+    }
+
+    .Button,
+    .Button-active,
+    .Logo {
+        width: 10vw;
+    }
+
+    #A,
+    #B,
+    #C,
+    #D,
+    #Settings {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+
+        display: inline;
+        padding: 0;
+        margin: 0;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    .item {
+        width: calc(100vw - var(--HeaderWidth));
+        padding: 0;
+        margin: 1rem 0;
+    }
+
+}

@@ -30,24 +30,26 @@
     <link rel="stylesheet" href="css/B/buitenEnBinnentemp.css">
     <link rel="stylesheet" href="css/B/slider.css">
 
+    <!-- All media queries -->
+    <link rel="stylesheet" href="css/media.css">
+
 </head>
 
 <body>
+<!-- Header -->
     <div class="Header" id="BoxShadow">
-        <div class="Top">
-            <div class="Logo">
-                <h3 class="LogoTime" id="TextShadow">0:00</h3>
-                <div class="LogoFrame" id="BoxShadow">
-                    <img src="images/logo.png" alt="Logo">
-                </div>
-                <h3 class="LogoText" id="TextShadow">EcoNest</h3>
+        <div class="Logo">
+            <h3 class="LogoTime" id="TextShadow">0:00</h3>
+            <div class="LogoFrame" id="BoxShadow">
+                <img src="images/logo.png" alt="Logo">
             </div>
-            <div class="Buttons">
-                <a class="Button" href="?page=A"><h3>Weer</h3></a>
-                <a class="Button" href="?page=B"><h3>Engerie</h3></a>
-                <a class="Button" href="?page=C"><h3>Huisje</h3></a>
-                <a class="Button" href="?page=Settings"><h3>Settings</h3></a>
-            </div>
+            <h3 class="LogoText" id="TextShadow">EcoNest</h3>
+        </div>
+        <div class="Buttons">
+            <a class="Button" href="?page=A"><h3>Weer</h3></a>
+            <a class="Button" href="?page=B"><h3>Engerie</h3></a>
+            <a class="Button" href="?page=C"><h3>Huisje</h3></a>
+            <a class="Button" href="?page=Settings"><h3>Settings</h3></a>
         </div>
         <div class="Account">
             <div class="AccountFrame">
@@ -56,7 +58,7 @@
             </div>
         </div>
     </div>
-    <!-- The Main page -->
+    <!-- Main page -->
     <?php
         $page = 'A';
         if (isset($_GET['page'])) {
