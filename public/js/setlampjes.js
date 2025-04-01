@@ -6,6 +6,6 @@ if (slider1 != null){
     });
     
     
-    SetLampje(1, true);
+    SetLampje(1, true); 
     
 }
