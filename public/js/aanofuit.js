@@ -17,4 +17,3 @@ function checkTimeAndSetLampje() {
     }
 }
 
-setInterval(checkTimeAndSetLampje, 60000);
