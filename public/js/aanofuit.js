@@ -8,7 +8,7 @@ function checkTimeAndSetLampje() {
             console.log("JSON data:", data);
 
             if (!data.lights.LED1) {
-                SetLampje(1, true);
+                SetLampje(2, true);
                 console.log("Lampje AAN gezet om 11:30.");
             } else {
                 console.log("Lampje stond al aan.");
