@@ -53,6 +53,11 @@ async function main() {
     console.log('dataDay:', dataDay);
     console.log('dataWeek:', dataWeek);
 
+    const sunriseH3 = document.getElementById("sunrise");
+    const sunsetH3 = document.getElementById("sunset");
+    const maxTemp = document.getElementById("maxTempText");
+    const minTemp = document.getElementById("minTempText");
+
     // jesper zijn dingen
     setWeatherData(dataWeek);
 
@@ -97,11 +102,11 @@ function setWeatherData(data) {
 }
 
 function setDiscripie(data) {
-    const maxTemp = document.getElementById("maxTempText");
-    const minTemp = document.getElementById("minTempText");
-
-    maxTemp.innerHTML = "🌡️ Max: "+ data.daily.temperature_2m_max[0]+"°C";
-    minTemp.innerHTML = "🌡️ Min: "+ data.daily.temperature_2m_min[0]+"°C";
+    if (sunriseH3 != null)
+        maxTemp.innerHTML = "🌡️ Max: "+ data.daily.temperature_2m_max[0]+"°C";
+    
+    if (sunriseH3 != null)
+        minTemp.innerHTML = "🌡️ Min: "+ data.daily.temperature_2m_min[0]+"°C";
 }
 
 function sunsetSunrise(data) {
@@ -110,11 +115,12 @@ function sunsetSunrise(data) {
     const simplifiedSunrise = sunrise.split('T')[1]; 
     const simplifiedSunset = sunset.split('T')[1]; 
 
-    const sunriseH3 = document.getElementById("sunrise");
-    const sunsetH3 = document.getElementById("sunset");
-
-    sunriseH3.innerHTML = `Sunrise: ${simplifiedSunrise}`;
-    sunsetH3.innerHTML = `Sunset: ${simplifiedSunset}`;
+    if (sunriseH3 != null)
+        sunriseH3.innerHTML = `Sunrise: ${simplifiedSunrise}`;
+    
+    if (sunsetH3 != null)
+        sunsetH3.innerHTML = `Sunset: ${simplifiedSunset}`;
+    
 
 }
 

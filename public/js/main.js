@@ -38,4 +38,4 @@ GetData().then(data => {
     console.log("JSON data:", data);
 });
 
-//SetLampje(1, false);
+// SetLampje(1, false);
