@@ -7,12 +7,12 @@
     <title>EcoNest</title>
     <link rel="icon" src="images/logo.png" type="image/x-icon">
 
+    <!-- All JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    
     <script type="text/javascript" src="js/main.js" defer></script>
     <script type="text/javascript" src="js/weather.js" defer></script>
     <script type="text/javascript" src="js/energy.js" defer></script>
-
+    <script type="text/javascript" src="js/energyKosten.js" defer></script>
     <script type="text/javascript" src="js/setlampjes.js" defer></script>
 
 
