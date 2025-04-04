@@ -6,8 +6,7 @@ if (slider1 != null) {
         slider1.checked = data.lights.LED1;
     });
     
-    // Set up event listener for slider change
-    slider1.addEventListener('change', () => {
-        SetLampje(1, slider1.checked);
-    });
+    
+    SetLampje(1, true); 
+    
 }
