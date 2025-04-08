@@ -1,15 +1,13 @@
 function checkTimeAndSetLampje() {
     const now = new Date();
-    const targetHour = 14; 
-    const targetMinute =40; 
+    const targetHour = 15; 
 
-    if (true )//now.getHours() === targetHour && now.getMinutes() === targetMinute)
-     {
+    if (now.getHours() === targetHour && now.getMinutes() === targetMinute) {
         GetData().then(data => {
             console.log("JSON data:", data);
 
-            if (!data.lights.LED1) {
-                SetLampje(1, false); 
+            if (!data.lights.LED2) {
+                SetLampje(1, true); 
                 console.log("Lampje AAN gezet om 12:50.");
             } else {
                 console.log("Lampje stond al aan.");
