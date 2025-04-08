@@ -56,13 +56,6 @@
                 <a class="Button" href="?page=B"><h3>Engerie</h3></a>
                 <a class="Button" href="?page=Settings"><h3>Settings</h3></a>
             </div>
-            <h3 class="LogoText" id="TextShadow">EcoNest</h3>
-        </div>
-        <div class="Buttons">
-            <a class="Button" href="?page=A"><h3>Weer</h3></a>
-            <a class="Button" href="?page=B"><h3>Engerie</h3></a>
-            <a class="Button" href="?page=C"><h3>Huisje</h3></a>
-            <a class="Button" href="?page=Settings"><h3>Settings</h3></a>
         </div>
         <div class="Account">
             <div class="AccountFrame">
