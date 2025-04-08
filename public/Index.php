@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
 
+
     <!-- All CSS for A -->
     <link rel="stylesheet" href="css/A/weather.css">
     <link rel="stylesheet" href="css/A/ActueleTemp.css">
@@ -31,6 +32,7 @@
     <link rel="stylesheet" href="css/B/weatherGrath.css">
     <link rel="stylesheet" href="css/B/buitenEnBinnentemp.css">
     <link rel="stylesheet" href="css/B/slider.css">
+    <link rel="stylesheet" href="css/B/jokeday.css">
 
 </head>
 
