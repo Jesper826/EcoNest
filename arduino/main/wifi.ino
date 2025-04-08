@@ -23,7 +23,7 @@ void CheckWifi() {
 
 void SetupWifi() {
   WiFi.setSleepMode(WIFI_NONE_SLEEP);
-  deviceName = "NodeMCU_g" + String(random(0x7FFFFFFF));
+  deviceName = "Bram" + String(random(0x7FFFFFFF));
   WiFi.hostname(deviceName.c_str());
 
   if (serverProtocol.length() > 0 && serverIP.length() > 0 && serverDirectory.length() > 0) {

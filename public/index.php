@@ -12,7 +12,9 @@
     <script type="text/javascript" src="js/main.js" defer></script>
     <script type="text/javascript" src="js/weather.js" defer></script>
     <script type="text/javascript" src="js/energy.js" defer></script>
-    <script type="text/javascript" src="js/energyKosten.js" defer></script>
+    <script type="text/javascript" src="js/aanofuit.js" defer></script>
+    <script type="text/javascript" src="js/temp.js" defer></script>
+
     <script type="text/javascript" src="js/setlampjes.js" defer></script>
     <script type="text/javascript" src="js/JokeOfDay.js" defer></script>
 
@@ -39,10 +41,18 @@
 <body>
 <!-- Header -->
     <div class="Header" id="BoxShadow">
-        <div class="Logo">
-            <h3 class="LogoTime" id="TextShadow">0:00</h3>
-            <div class="LogoFrame" id="BoxShadow">
-                <img src="images/logo.png" alt="Logo">
+        <div class="Top">
+            <div class="Logo">
+                <h3 class="LogoTime" id="TextShadow">0:00</h3>
+                <div class="LogoFrame" id="BoxShadow">
+                    <img src="images/logo.png" alt="Logo">
+                </div>
+                <h3 class="LogoText" id="TextShadow">EcoNest</h3>
+            </div>
+            <div class="Buttons">
+                <a class="Button" href="?page=A"><h3>Weer</h3></a>
+                <a class="Button" href="?page=B"><h3>Engerie</h3></a>
+                <a class="Button" href="?page=Settings"><h3>Settings</h3></a>
             </div>
             <h3 class="LogoText" id="TextShadow">EcoNest</h3>
         </div>

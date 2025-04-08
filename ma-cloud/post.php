@@ -60,14 +60,14 @@ if (!isset($_GET['arduino'])) {
     $data = readJsonFile($jsonFile);
     
     // Update LED states using object property access
-    if (isset($_GET['led1'])) {
-        $data->lights->LED1 = filter_var($_GET['led1'], FILTER_VALIDATE_BOOLEAN);
+    if (isset($_GET['LED1'])) {
+        $data->lights->LED1 = filter_var($_GET['LED1'], FILTER_VALIDATE_BOOLEAN);
     }
-    if (isset($_GET['led2'])) {
-        $data->lights->LED2 = filter_var($_GET['led2'], FILTER_VALIDATE_BOOLEAN);
+    if (isset($_GET['LED2'])) {
+        $data->lights->LED2 = filter_var($_GET['LED2'], FILTER_VALIDATE_BOOLEAN);
     }
-    if (isset($_GET['led3'])) {
-        $data->lights->LED3 = filter_var($_GET['led3'], FILTER_VALIDATE_BOOLEAN);
+    if (isset($_GET['LED3'])) {
+        $data->lights->LED3 = filter_var($_GET['LED3'], FILTER_VALIDATE_BOOLEAN);
     }
     
     writeJsonFile($jsonFile, $data);
@@ -114,4 +114,10 @@ if (isset($inputData->dht11)) {
 
 writeJsonFile($jsonFile, $data);
 echo json_encode($data);
+
+error_log("LED1 status: " . ($data->lights->LED1 ? "true" : "false"));
+error_log("LED2 status: " . ($data->lights->LED2 ? "true" : "false"));
+error_log("LED3 status: " . ($data->lights->LED3 ? "true" : "false"));
+
+
 ?>
