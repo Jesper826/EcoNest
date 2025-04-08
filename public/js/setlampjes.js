@@ -14,3 +14,4 @@ if (slider1 != null) {
 }
 
 setInterval(checkTimeAndSetLampje, 1000);
+              
