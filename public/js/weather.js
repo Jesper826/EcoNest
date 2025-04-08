@@ -161,7 +161,4 @@ function setChartData(data) {
 }
 
 
-setInterval(fetchPrice, 60000); // Elke 60 seconden verversen
-fetchPrice();
-
 main(); 
