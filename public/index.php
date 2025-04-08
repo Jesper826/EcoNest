@@ -14,6 +14,7 @@
     <script type="text/javascript" src="js/energy.js" defer></script>
     <script type="text/javascript" src="js/energyKosten.js" defer></script>
     <script type="text/javascript" src="js/setlampjes.js" defer></script>
+    <script type="text/javascript" src="js/JokeOfDay.js" defer></script>
 
 
     <!-- All CSS for Main -->

@@ -16,13 +16,13 @@ updateTime(); // calling the function for the first time so that it does not sho
 
 
 function SetLampje(ledNum, inOn) {
-    url = ("https://"+student+".hosts2.ma-cloud.nl/EcoNest/api/post.php?led" + ledNum + "=" + inOn);
+    url = ("https://"+student+".hosts2.ma-cloud.nl/EcoNest/ma-cloud/post.php?led" + ledNum + "=" + inOn);
     console.log(url);
     fetch(url);
 }
 
 function GetData() {
-    return fetch("https://"+student+".hosts2.ma-cloud.nl/EcoNest/api/post.php")
+    return fetch("https://"+student+".hosts2.ma-cloud.nl/EcoNest/ma-cloud/post.php")
         .then(response => {
             if (!response.ok) {
                 throw new Error("Network response was not ok");
