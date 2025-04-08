@@ -75,3 +75,20 @@ fetch('https://v2.jokeapi.dev/joke/Any')
     console.error('Error fetching joke:', error);
     document.getElementById('joke').innerText = 'Failed to load joke.';
   });
+  document.getElementById("newJokeButton").addEventListener("click", () => {
+    fetch('https://v2.jokeapi.dev/joke/Any')
+        .then(response => response.json())
+        .then(data => {
+            let jokeText;
+            if (data.type === "single") {
+                jokeText = data.joke;
+            } else {
+                jokeText = `${data.setup} ... ${data.delivery}`;
+            }
+            document.getElementById('joke').innerText = jokeText;
+        })
+        .catch(error => {
+            console.error('Error fetching joke:', error);
+            document.getElementById('joke').innerText = 'Failed to load joke.';
+        });
+});
