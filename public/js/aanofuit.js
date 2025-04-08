@@ -2,7 +2,7 @@ function checkTimeAndSetLampje() {
     const now = new Date();
     const targetHour = 15; 
 
-    if (now.getHours() === targetHour && now.getMinutes() === targetMinute) {
+    if (now.getHours() === targetHour) {
         GetData().then(data => {
             console.log("JSON data:", data);
 
