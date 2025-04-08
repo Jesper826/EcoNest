@@ -1,11 +1,16 @@
 const slider1 = document.getElementById("sliderLed1");
-if (slider1 != null){
+
+if (slider1 != null) {
     GetData().then(data => {
-        console.log(data.lights.LED1);
+        console.log("Huidige status LED1:", data.lights.LED1);
         slider1.checked = data.lights.LED1;
     });
-    
-    
-    SetLampje(1, true); 
-    
+
+    slider1.addEventListener("change", () => {
+        const isOn = slider1.checked; 
+        SetLampje(1, isOn); 
+        console.log(`Lampje LED1 is ${isOn ? "AAN" : "UIT"} gezet.`);
+    });
 }
+
+setInterval(checkTimeAndSetLampje, 1000);

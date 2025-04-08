@@ -15,13 +15,13 @@ updateTime(); // calling the function for the first time so that it does not sho
 
 
 function SetLampje(ledNum, inOn) {
-    url = ("https://38734.hosts2.ma-cloud.nl/EcoNest/api/post.php?led" + ledNum + "=" + inOn);
+    url = ("https://38734.hosts2.ma-cloud.nl/EcoNest/ma-cloud/post.php?led" + ledNum + "=" + inOn);
     console.log(url);
     fetch(url);
 }
 
 function GetData() {
-    return fetch("https://38734.hosts2.ma-cloud.nl/EcoNest/api/post.php")
+    return fetch("https://38734.hosts2.ma-cloud.nl/EcoNest/ma-cloud/post.php")
         .then(response => {
             if (!response.ok) {
                 throw new Error("Network response was not ok");
@@ -39,3 +39,18 @@ GetData().then(data => {
 });
 
 //SetLampje(1, false);
+
+function SetLampje(ledNum, inOn) {
+    const url = `https://38734.hosts2.ma-cloud.nl/EcoNest/ma-cloud/post.php?led${ledNum}=${inOn}`;
+    console.log(`Verzoek verzonden naar: ${url}`);
+    fetch(url, { method: "POST" })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Fout bij het verzenden van het verzoek");
+            }
+            console.log(`Lampje ${ledNum} is ${inOn ? "AAN" : "UIT"} gezet.`);
+        })
+        .catch(error => {
+            console.error("Fout bij het aanzetten/uitzetten van het lampje:", error);
+        });
+}

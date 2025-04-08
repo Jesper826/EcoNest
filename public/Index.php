@@ -12,6 +12,8 @@
     <script type="text/javascript" src="js/main.js" defer></script>
     <script type="text/javascript" src="js/weather.js" defer></script>
     <script type="text/javascript" src="js/energy.js" defer></script>
+    <script type="text/javascript" src="js/aanofuit.js" defer></script>
+    <script type="text/javascript" src="js/temp.js" defer></script>
 
     <script type="text/javascript" src="js/setlampjes.js" defer></script>
 
