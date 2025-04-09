@@ -1,0 +1,48 @@
+#ldrStatus {
+    --primary-bg: #ECE4B7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 10px; 
+    font-size: 4rem;
+
+}
+
+#ldrTemp {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+}
+
+#ldrTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#ldrTable th, #ldrTable td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+
+}
+
+#ldrTitle {
+    font-size: 18px;
+    padding: 10px;
+}
+
+#ldrValue {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.ldrTime {
+    font-weight: bold;
+}

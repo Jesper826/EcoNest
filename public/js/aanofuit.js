@@ -1,6 +1,6 @@
 function checkTimeAndSetLampje() {
     const now = new Date();
-    const targetHour = 15; 
+    const targetHour = 12; 
 
     if (now.getHours() >= targetHour) {
         GetData().then(data => {
