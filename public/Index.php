@@ -14,6 +14,7 @@
     <script type="text/javascript" src="js/energy.js" defer></script>
     <script type="text/javascript" src="js/aanofuit.js" defer></script>
     <script type="text/javascript" src="js/temp.js" defer></script>
+    <script type="text/javascript" src="js/ldr.js" defer></script>
 
     <script type="text/javascript" src="js/setlampjes.js" defer></script>
 
@@ -33,6 +34,7 @@
     <link rel="stylesheet" href="css/B/buitenEnBinnentemp.css">
     <link rel="stylesheet" href="css/B/slider.css">
     <link rel="stylesheet" href="css/B/jokeday.css">
+    <link rel="stylesheet" href="css/B/ldr.css">
 
 </head>
 
