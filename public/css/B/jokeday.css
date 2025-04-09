@@ -1,4 +1,4 @@
-/* .container {
+ .joke-container {
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -6,7 +6,7 @@
     max-width: 500px;
 }
 
-h1 {
+#h1joke {
     margin-bottom: 1rem;
     color: #34623F;
 }    
@@ -17,7 +17,7 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
-button {
+#newJokeButton {
     padding: 0.6rem 1.2rem;
     font-size: 1rem;
     background-color: #34623F;;
@@ -30,4 +30,4 @@ button {
 
 button:hover {
     background-color: limegreen;
-} */
+} 

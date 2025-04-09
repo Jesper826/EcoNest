@@ -16,7 +16,6 @@
     <script type="text/javascript" src="js/temp.js" defer></script>
 
     <script type="text/javascript" src="js/setlampjes.js" defer></script>
-    <script type="text/javascript" src="js/JokeOfDay.js" defer></script>
 
 
     <!-- All CSS for Main -->
@@ -33,7 +32,7 @@
     <link rel="stylesheet" href="css/B/weatherGrath.css">
     <link rel="stylesheet" href="css/B/buitenEnBinnentemp.css">
     <link rel="stylesheet" href="css/B/slider.css">
-    <link rel="stylesheet" href="css/B/jokeday.css">
+   <link rel="stylesheet" href="css/B/jokeday.css">
 
     <!-- All media queries -->
     <link rel="stylesheet" href="css/media.css">
