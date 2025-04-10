@@ -99,15 +99,9 @@ function setWeatherData(data) {
     }
 
     document.getElementById("weather-table").innerHTML = tableRows;
+    
 }
 
-function setDiscripie(data) {
-    if (sunriseH3 != null)
-        maxTemp.innerHTML = "🌡️ Max: "+ data.daily.temperature_2m_max[0]+"°C";
-    
-    if (sunriseH3 != null)
-        minTemp.innerHTML = "🌡️ Min: "+ data.daily.temperature_2m_min[0]+"°C";
-}
 
 function sunsetSunrise(data) {
     const sunrise = data.daily.sunrise[0];
@@ -160,5 +154,4 @@ function setChartData(data) {
     });
 }
 
-
-main(); 
+window.addEventListener("DOMContentLoaded", main);
