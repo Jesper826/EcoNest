@@ -10,7 +10,7 @@ function startOfWeek(date) {
 }
 function endOfWeek(date) {
     const start = startOfWeek(date);
-    const end = new Date(start);    
+    const end = new Date(start);
     end.setDate(start.getDate() + 6);
     return end;
 }
@@ -20,7 +20,7 @@ const now = new Date();
 const apiUrlDay = 'https://api.open-meteo.com/v1/forecast?' +
     'latitude=52.386718' +
     '&longitude=4.846544' +
-    '&daily=sunrise,sunset,temperature_2m_min,temperature_2m_max' +   
+    '&daily=sunrise,sunset,temperature_2m_min,temperature_2m_max' +
     '&timezone=Europe%2FBerlin' +
     '&start_date=' + formatDate(now) +
     '&end_date=' + formatDate(now);
@@ -52,11 +52,6 @@ async function main() {
 
     console.log('dataDay:', dataDay);
     console.log('dataWeek:', dataWeek);
-
-    const sunriseH3 = document.getElementById("sunrise");
-    const sunsetH3 = document.getElementById("sunset");
-    const maxTemp = document.getElementById("maxTempText");
-    const minTemp = document.getElementById("minTempText");
 
     // jesper zijn dingen
     setWeatherData(dataWeek);
@@ -99,9 +94,15 @@ function setWeatherData(data) {
     }
 
     document.getElementById("weather-table").innerHTML = tableRows;
-    
 }
 
+function setDiscripie(data) {
+    const maxTemp = document.getElementById("maxTempText");
+    const minTemp = document.getElementById("minTempText");
+
+    maxTemp.innerHTML = "🌡️ Max: "+ data.daily.temperature_2m_max[0]+"°C";
+    minTemp.innerHTML = "🌡️ Min: "+ data.daily.temperature_2m_min[0]+"°C";
+}
 
 function sunsetSunrise(data) {
     const sunrise = data.daily.sunrise[0];
@@ -109,12 +110,11 @@ function sunsetSunrise(data) {
     const simplifiedSunrise = sunrise.split('T')[1]; 
     const simplifiedSunset = sunset.split('T')[1]; 
 
-    if (sunriseH3 != null)
-        sunriseH3.innerHTML = `Sunrise: ${simplifiedSunrise}`;
-    
-    if (sunsetH3 != null)
-        sunsetH3.innerHTML = `Sunset: ${simplifiedSunset}`;
-    
+    const sunriseH3 = document.getElementById("sunrise");
+    const sunsetH3 = document.getElementById("sunset");
+
+    sunriseH3.innerHTML = `Sunrise: ${simplifiedSunrise}`;
+    sunsetH3.innerHTML = `Sunset: ${simplifiedSunset}`;
 
 }
 
@@ -154,4 +154,20 @@ function setChartData(data) {
     });
 }
 
-window.addEventListener("DOMContentLoaded", main);
+async function fetchPrice() {
+    try {
+        const response = await fetch('https://api.energyzero.nl/v1/dynamic-prices');
+        const data = await response.json();
+        const currentHour = new Date().getHours();
+        const currentPrice = data.prices.find(price => new Date(price.datetime).getHours() === currentHour);
+        document.getElementById("currentPrice").innerText = "€" + currentPrice.price.toFixed(2);
+    } catch (error) {
+        console.error("Fout bij ophalen prijs:", error);
+        document.getElementById("currentPrice").innerText = "Niet beschikbaar";
+    }
+}
+
+setInterval(fetchPrice, 60000); // Elke 60 seconden verversen
+fetchPrice();
+
+main();
