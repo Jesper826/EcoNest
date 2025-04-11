@@ -13,4 +13,4 @@ if (slider1 != null) {
     });
 }
 
-setInterval(updateTemperatures, 1000);
+setInterval(1000);

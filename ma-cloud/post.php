@@ -1,8 +1,13 @@
 <?php
-// Voeg dit toe aan het begin van post.php
+if (isset($_GET['LED1'])) {
+    $data->lights->LED1 = filter_var($_GET['LED1'], FILTER_VALIDATE_BOOLEAN);
+}
+error_log("Ontvangen LED1-waarde: " . $_GET['LED1']);
+error_log("Bijgewerkte JSON: " . json_encode($data));
 error_log("Ontvangen verzoek: " . print_r($_GET, true));
 error_log("Ontvangen POST-data: " . file_get_contents('php://input'));
 header('Access-Control-Allow-Origin: *');
+
 // Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
