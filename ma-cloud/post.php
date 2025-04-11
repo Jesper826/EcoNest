@@ -1,5 +1,7 @@
 <?php
-
+// Voeg dit toe aan het begin van post.php
+error_log("Ontvangen verzoek: " . print_r($_GET, true));
+error_log("Ontvangen POST-data: " . file_get_contents('php://input'));
 header('Access-Control-Allow-Origin: *');
 // Enable error reporting for debugging
 error_reporting(E_ALL);

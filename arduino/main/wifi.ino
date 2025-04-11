@@ -10,9 +10,7 @@ String deviceName;
 
 // POST variables
 const String serverProtocol = "https://";
-const String serverIP = "38734.hosts2.ma-cloud.nl"; //bram
-//const String serverIP = "38406.hosts2.ma-cloud.nl"; //3nick
-//const String serverIP = "38734.hosts2.ma-cloud.nl"; //jesper
+const String serverIP = "38734.hosts2.ma-cloud.nl"; 
 const String serverDirectory = "EcoNest/ma-cloud/post.php?arduino=1";
 const uint8_t thumbprint[20] = { 0xf8, 0x7e, 0x63, 0xa9, 0x4e, 0x2b, 0xf7, 0xfa, 0xd7, 0xd4, 0x60, 0xe1, 0x20, 0x57, 0x83, 0x5f, 0xf8, 0x34, 0x5b, 0x44 };
 String URL = "";

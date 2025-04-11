@@ -13,5 +13,4 @@ if (slider1 != null) {
     });
 }
 
-setInterval(checkTimeAndSetLampje, 1000);
-              
+setInterval(updateTemperatures, 1000);
