@@ -12,11 +12,11 @@ function updateTime() {
 }
 setInterval(updateTime, 1000);
 
-updateTime(); // calling the function for the first time so that it does not show the default time
+updateTime(); 
 
 
 function SetLampje(ledNum, inOn) {
-    url = ("https://"+student+".hosts2.ma-cloud.nl/EcoNest/ma-cloud/post.php?led" + ledNum + "=" + inOn);
+    url = ("https://"+student+".hosts2.ma-cloud.nl/EcoNest/ma-cloud/post.php?LED" + ledNum + "=" + inOn);
     console.log(url);
     fetch(url);
 }
@@ -42,7 +42,7 @@ GetData().then(data => {
 //SetLampje(1, false);
 
 function SetLampje(ledNum, inOn) {
-    const url = `https://38734.hosts2.ma-cloud.nl/EcoNest/ma-cloud/post.php?led${ledNum}=${inOn}`;
+    const url = `https://38734.hosts2.ma-cloud.nl/EcoNest/ma-cloud/post.php?LED${ledNum}=${inOn}`;
     console.log(`Verzoek verzonden naar: ${url}`);
     fetch(url, { method: "POST" })
         .then(response => {
