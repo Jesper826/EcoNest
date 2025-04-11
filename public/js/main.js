@@ -1,5 +1,4 @@
 /// clock left corner
-let student = 38406;
 function updateTime() {
     var currentTime = new Date()
     var hours = currentTime.getHours()
@@ -16,13 +15,13 @@ updateTime(); // calling the function for the first time so that it does not sho
 
 
 function SetLampje(ledNum, inOn) {
-    url = ("https://"+student+".hosts2.ma-cloud.nl/EcoNest/ma-cloud/post.php?led" + ledNum + "=" + inOn);
+    url = ("https://38734.hosts2.ma-cloud.nl/EcoNest/ma-cloud/post.php?led" + ledNum + "=" + inOn);
     console.log(url);
     fetch(url);
 }
 
 function GetData() {
-    return fetch("https://"+student+".hosts2.ma-cloud.nl/EcoNest/ma-cloud/post.php")
+    return fetch("https://38734.hosts2.ma-cloud.nl/EcoNest/ma-cloud/post.php")
         .then(response => {
             if (!response.ok) {
                 throw new Error("Network response was not ok");

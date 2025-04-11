@@ -10,7 +10,7 @@ String deviceName;
 
 // POST variables
 const String serverProtocol = "https://";
-const String serverIP = "38999.hosts2.ma-cloud.nl"; //bram
+const String serverIP = "38734.hosts2.ma-cloud.nl"; //bram
 //const String serverIP = "38406.hosts2.ma-cloud.nl"; //3nick
 //const String serverIP = "38734.hosts2.ma-cloud.nl"; //jesper
 const String serverDirectory = "EcoNest/api/post.php?arduino=1";
