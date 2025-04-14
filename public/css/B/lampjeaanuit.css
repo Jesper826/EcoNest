@@ -1,0 +1,10 @@
+.lamp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.lamp > img{
+    height: 20rem;
+}

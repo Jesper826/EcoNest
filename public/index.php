@@ -33,9 +33,9 @@
     <link rel="stylesheet" href="css/B/weatherGrath.css">
     <link rel="stylesheet" href="css/B/buitenEnBinnentemp.css">
     <link rel="stylesheet" href="css/B/slider.css">
-   <link rel="stylesheet" href="css/B/jokeday.css">
-   <link rel="stylesheet" href="css/B/jokeday.css">
-   <link rel="stylesheet" href="css/B/ldr.css">
+    <link rel="stylesheet" href="css/B/jokeday.css">
+    <link rel="stylesheet" href="css/B/lampjeaanuit.css">
+    <link rel="stylesheet" href="css/B/ldr.css">
 
     <!-- All media queries -->
     <link rel="stylesheet" href="css/media.css">
